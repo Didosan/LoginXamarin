@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Login01.Views.LoginPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid>
+
+                <Image Source="coffee.jpg" HorizontalOptions="Center"></Image>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <StackLayout Grid.Row="1" Padding="10,10" HorizontalOptions="CenterAndExpand">
+                        <Entry x:Name="Entry_Username" Placeholder="Enter e-mail" PlaceholderColor="White"/>
+                        <Entry x:Name="Entry_Password" Placeholder="Password" PlaceholderColor="White" IsPassword="True"/>
+                        <Button x:Name="Btn_Login" Text="Login in" Clicked="Login" BackgroundColor="Blue" BorderRadius="10"
+                                TextColor="DarkRed"/>
+
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Forgot password?"/>
+                            <Label x:Name="Registration" Text="Registration"  HorizontalOptions="EndAndExpand" FontAttributes="Bold"/>
+                        </StackLayout>
+                    </StackLayout>
+
+                    <StackLayout Grid.Row="2" HorizontalOptions="Center" Margin="0,0,0,30">
+                        <Label Text="Login whit" HorizontalOptions="Center"/>
+                        <Image Source="facebook.png" WidthRequest="45" HeightRequest="45"></Image>
+                    </StackLayout>
+                </Grid>
+
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
